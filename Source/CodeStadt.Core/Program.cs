@@ -18,13 +18,34 @@ namespace CodeStadt.Core
                     new NumberOfLinesCalculator(300),
                     new ILCyclomicComplextityCalculator(4)},
                     "TestReport",
-                    (new ReportFactory()).ResolveReport(ReportType.All, "TestReport"));
+                    new DrivenMetrics.Reporting.ResultOutput());
            
             something.RunAllMetricsAndGenerateReport();
-                    
 
+            DrivenMetrics.Reporting.ResultOutput results = something.Report.As<DrivenMetrics.Reporting.ResultOutput>();
 
+            if (results != null)
+            {
+                results.Results.ForEach(x =>
+                {
+                    Console.WriteLine("Metric: {0}".Formatted(x.Name));
+                    Console.WriteLine("");
 
+                    x.ClassResults.ForEach(y =>
+                    {
+                        Console.WriteLine("  Class: {0}".Formatted(y.Name));
+                        Console.WriteLine("");
+                        y.MethodResults.ForEach(z =>
+                        {
+                            Console.WriteLine("    Method: {0} \n\r    Result: {1}".Formatted(z.Name, z.Result));
+                            Console.WriteLine("");
+
+                        });
+                    });
+                });
+            }
+
+            Console.ReadLine();
 
         }
     }
