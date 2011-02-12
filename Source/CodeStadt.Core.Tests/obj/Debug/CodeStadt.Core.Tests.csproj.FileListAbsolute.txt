@@ -1,0 +1,5 @@
+D:\Git\CodeStadt\Source\CodeStadt.Core.Tests\bin\Debug\CodeStadt.Core.Tests.dll
+D:\Git\CodeStadt\Source\CodeStadt.Core.Tests\bin\Debug\CodeStadt.Core.Tests.pdb
+D:\Git\CodeStadt\Source\CodeStadt.Core.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\CodeStadt\Source\CodeStadt.Core.Tests\obj\Debug\CodeStadt.Core.Tests.dll
+D:\Git\CodeStadt\Source\CodeStadt.Core.Tests\obj\Debug\CodeStadt.Core.Tests.pdb

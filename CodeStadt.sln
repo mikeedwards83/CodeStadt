@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{FF99016F-A66F-422C-939C-D53FB5AAC8EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F6815E31-66D0-4EA1-A079-4137148938BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeStadt.Core.Tests", "Source\CodeStadt.Core.Tests\CodeStadt.Core.Tests.csproj", "{4895D376-B8D3-4A1A-A65C-09832F6006A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeStadt.Core", "Source\CodeStadt.Core\CodeStadt.Core.csproj", "{A7761043-8B48-410F-9063-06BFFAF6B524}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4895D376-B8D3-4A1A-A65C-09832F6006A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4895D376-B8D3-4A1A-A65C-09832F6006A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4895D376-B8D3-4A1A-A65C-09832F6006A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4895D376-B8D3-4A1A-A65C-09832F6006A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7761043-8B48-410F-9063-06BFFAF6B524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7761043-8B48-410F-9063-06BFFAF6B524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7761043-8B48-410F-9063-06BFFAF6B524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7761043-8B48-410F-9063-06BFFAF6B524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7761043-8B48-410F-9063-06BFFAF6B524} = {FF99016F-A66F-422C-939C-D53FB5AAC8EC}
+		{4895D376-B8D3-4A1A-A65C-09832F6006A7} = {F6815E31-66D0-4EA1-A079-4137148938BF}
+	EndGlobalSection
+EndGlobal
