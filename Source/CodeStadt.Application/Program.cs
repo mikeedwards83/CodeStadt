@@ -64,21 +64,21 @@ namespace CodeStadt.Application
             string simpleFileName = "simple.jpg";
             if (File.Exists(simpleFileName)) File.Delete(simpleFileName);
 
-            Bitmap simpleMap = new Bitmap(100, 100);
+            Bitmap simpleMap = new Bitmap(1000, 1000);
             
             Graphics simpleImage = Graphics.FromImage(simpleMap);
 
             //front square
-            Coordinate3D coord1 = new Coordinate3D(30, 30, 1);
-            Coordinate3D coord2 = new Coordinate3D(80, 30, 1);
-            Coordinate3D coord3 = new Coordinate3D(80, 80, 1);
-            Coordinate3D coord4 = new Coordinate3D(30, 80, 1);
+            Coordinate3D coord1 = new Coordinate3D(430, 430, 1);
+            Coordinate3D coord2 = new Coordinate3D(480, 430, 1);
+            Coordinate3D coord3 = new Coordinate3D(480, 480, 1);
+            Coordinate3D coord4 = new Coordinate3D(430, 480, 1);
 
             //rear square
-            Coordinate3D coord11 = new Coordinate3D(50, 50, 2);
-            Coordinate3D coord21 = new Coordinate3D(120, 50, 2);
-            Coordinate3D coord31 = new Coordinate3D(120, 120, 2);
-            Coordinate3D coord41 = new Coordinate3D(50, 120, 2);
+            Coordinate3D coord11 = new Coordinate3D(450, 450, 2);
+            Coordinate3D coord21 = new Coordinate3D(520, 450, 2);
+            Coordinate3D coord31 = new Coordinate3D(520, 520, 2);
+            Coordinate3D coord41 = new Coordinate3D(450, 520, 2);
 
 
             //draw front square
@@ -113,11 +113,11 @@ namespace CodeStadt.Application
             string advancedFileName = "advanced.jpg";
             if (File.Exists(advancedFileName)) File.Delete(advancedFileName);
 
-            Bitmap advancedMap = new Bitmap(400, 400);
+            Bitmap advancedMap = new Bitmap(1000, 1000);
 
             Graphics advancedImage = Graphics.FromImage(advancedMap);
 
-            Coordinate3D viewPoint = new Coordinate3D(120, 60, -1);
+            Coordinate3D viewPoint = new Coordinate3D(600,600, -1);
 
             //draw rear square
 
