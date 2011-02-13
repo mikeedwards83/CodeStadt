@@ -119,6 +119,16 @@ namespace CodeStadt.Application
 
             Coordinate3D viewPoint = new Coordinate3D(600,600, -1);
 
+            AdvancedDrawer drawer = new AdvancedDrawer(screenZ, viewPoint, advancedImage);
+
+            drawer.DrawFilledPolygon(Brushes.Black,
+                new Coordinate3D(0, 0, 0),
+                new Coordinate3D(1000, 0, 0),
+                new Coordinate3D(1000, 1000, 0),
+                new Coordinate3D(0, 1000, 0));
+            
+
+
             //draw rear square
 
             //AdvancedDrawer.DrawLine(advancedImage, coord11, coord21, viewPoint, screenZ);
@@ -126,13 +136,13 @@ namespace CodeStadt.Application
             //AdvancedDrawer.DrawLine(advancedImage, coord31, coord41, viewPoint, screenZ);
             //AdvancedDrawer.DrawLine(advancedImage, coord41, coord11, viewPoint, screenZ);
 
-            AdvancedDrawer.DrawSquare(advancedImage, coord11, coord21, coord31, coord41, viewPoint, screenZ);
+            drawer.DrawFilledPolygon(Brushes.Beige, coord11, coord21, coord31, coord41);
 
             //draw front square
-            AdvancedDrawer.DrawLine(advancedImage, coord1, coord2, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord2, coord3, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord3, coord4, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord4, coord1, viewPoint, screenZ);
+            drawer.DrawLine(coord1, coord2);
+            drawer.DrawLine(coord2, coord3);
+            drawer.DrawLine(coord3, coord4);
+            drawer.DrawLine(coord4, coord1);
 
 
 
@@ -141,10 +151,10 @@ namespace CodeStadt.Application
 
             //link front to rear
 
-            AdvancedDrawer.DrawLine(advancedImage, coord1, coord11, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord2, coord21, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord3, coord31, viewPoint, screenZ);
-            AdvancedDrawer.DrawLine(advancedImage, coord4, coord41, viewPoint, screenZ);
+            drawer.DrawLine(coord1, coord11);
+            drawer.DrawLine(coord2, coord21);
+            drawer.DrawLine(coord3, coord31);
+            drawer.DrawLine(coord4, coord41);
 
             advancedMap.Save(advancedFileName);
 

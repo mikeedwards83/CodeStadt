@@ -8,27 +8,41 @@ namespace CodeStadt.Draw
 {
     public class AdvancedDrawer
     {
+        int _screenZ;
+        Coordinate3D _viewPoint;
+        Graphics _img;
 
-        public static void DrawLine(Graphics img, Coordinate3D start, Coordinate3D end, Coordinate3D viewPoint, int screenZ)
+        public AdvancedDrawer(
+            int screenZ,
+            Coordinate3D viewPoint,
+            Graphics img)
+        {
+            _screenZ = screenZ;
+            _viewPoint = viewPoint;
+            _img = img;
+        }
+
+
+
+        public void DrawLine(Coordinate3D start, Coordinate3D end)
         {
 
-            Coordinate2D start2d = ConvertTo2DCoords(start,viewPoint, screenZ);
-            Coordinate2D end2d = ConvertTo2DCoords(end, viewPoint, screenZ);
+            Coordinate2D start2d = ConvertTo2DCoords(start,_viewPoint, _screenZ);
+            Coordinate2D end2d = ConvertTo2DCoords(end, _viewPoint, _screenZ);
 
-            img.DrawLine(new Pen(Color.Red, 2), start2d, end2d);
+            _img.DrawLine(new Pen(Color.Red, 2), start2d, end2d);
 
         }
 
-        public static void DrawSquare(Graphics img, Coordinate3D topLeft, Coordinate3D topRight, Coordinate3D bottomLeft, Coordinate3D bottomRight, Coordinate3D viewPoint, int screenZ)
+        public void DrawFilledPolygon(Brush brush, params Coordinate3D [] points)
         {
-            Coordinate2D tl2d = ConvertTo2DCoords(topLeft, viewPoint, screenZ);
-            Coordinate2D tr2d = ConvertTo2DCoords(topRight, viewPoint, screenZ);
-            Coordinate2D bl2d = ConvertTo2DCoords(bottomLeft, viewPoint, screenZ);
-            Coordinate2D br2d = ConvertTo2DCoords(bottomRight, viewPoint, screenZ);
+            List<Coordinate2D> coords = new List<Coordinate2D>();
+            foreach (var point in points)
+            {
+                coords.Add(ConvertTo2DCoords(point, _viewPoint, _screenZ));
+            }
 
-            img.FillPolygon(Brushes.RoyalBlue, new Point[] { tl2d, tr2d, bl2d, br2d });
-
-
+            _img.FillPolygon(brush, coords.Select(x=> (Point) x).ToArray());
 
         }
 
@@ -44,11 +58,17 @@ namespace CodeStadt.Draw
 
         private static int CalculateScreenX(Coordinate3D point, Coordinate3D viewPoint, int screenZ)
         {
+            //not sure if this is correct
+            if (point.Z == 0 || viewPoint.Z == 0) return point.X;
+
             return (((point.X - viewPoint.X) * (screenZ - viewPoint.Z)) / (point.Z * viewPoint.Z)) + viewPoint.X;
         }
 
         private static int CalculateScreenY(Coordinate3D point, Coordinate3D viewPoint, int screenZ)
         {
+            //not sure if this is correct
+            if (point.Z == 0 || viewPoint.Z == 0) return point.Y;
+
             return (((point.Y - viewPoint.Y) * (screenZ - viewPoint.Z)) / (point.Z * viewPoint.Z))  +viewPoint.Y;
         }
 

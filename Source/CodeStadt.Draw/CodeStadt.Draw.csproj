@@ -54,6 +54,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleDrawer.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeStadt.Core\CodeStadt.Core.csproj">
+      <Project>{A7761043-8B48-410F-9063-06BFFAF6B524}</Project>
+      <Name>CodeStadt.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
