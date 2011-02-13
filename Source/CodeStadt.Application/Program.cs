@@ -101,12 +101,11 @@ namespace CodeStadt.Application
             SimpleDrawer.DrawLine(simpleImage, coord2, coord21, screenZ);
             SimpleDrawer.DrawLine(simpleImage, coord3, coord31, screenZ);
             SimpleDrawer.DrawLine(simpleImage, coord4, coord41, screenZ);
-
             
            
             simpleMap.Save(simpleFileName, ImageFormat.Jpeg);
 
-            //view point
+            //view point stuff
             //note that the blue square is the back face of the cube
 
             //some change
