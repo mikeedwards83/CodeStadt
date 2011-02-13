@@ -57,19 +57,16 @@ namespace CodeStadt.Application
 
             Console.WriteLine("Going to try and draw an image :-)");
 
-
-            string fileName = "test.jpg";
+            
+            
             int screenZ = 1;
 
-            if (File.Exists(fileName)) File.Delete(fileName);
+            string simpleFileName = "simple.jpg";
+            if (File.Exists(simpleFileName)) File.Delete(simpleFileName);
 
-            Bitmap map = new Bitmap(100, 100);
+            Bitmap simpleMap = new Bitmap(100, 100);
             
-            Graphics img = Graphics.FromImage(map);
-
-            
-
-
+            Graphics simpleImage = Graphics.FromImage(simpleMap);
 
             //front square
             Coordinate3D coord1 = new Coordinate3D(30, 30, 1);
@@ -85,32 +82,71 @@ namespace CodeStadt.Application
 
 
             //draw front square
-            SimpleDrawer.DrawLine(img, coord1, coord2, screenZ);
-            SimpleDrawer.DrawLine(img, coord2, coord3, screenZ);
-            SimpleDrawer.DrawLine(img, coord3, coord4, screenZ);
-            SimpleDrawer.DrawLine(img, coord4, coord1, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord1, coord2, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord2, coord3, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord3, coord4, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord4, coord1, screenZ);
 
 
             //draw rear square
 
-            SimpleDrawer.DrawLine(img, coord11, coord21, screenZ);
-            SimpleDrawer.DrawLine(img, coord21, coord31, screenZ);
-            SimpleDrawer.DrawLine(img, coord31, coord41, screenZ);
-            SimpleDrawer.DrawLine(img, coord41, coord11, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord11, coord21, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord21, coord31, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord31, coord41, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord41, coord11, screenZ);
 
             //link front to rear
 
-            SimpleDrawer.DrawLine(img, coord1, coord11, screenZ);
-            SimpleDrawer.DrawLine(img, coord2, coord21, screenZ);
-            SimpleDrawer.DrawLine(img, coord3, coord31, screenZ);
-            SimpleDrawer.DrawLine(img, coord4, coord41, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord1, coord11, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord2, coord21, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord3, coord31, screenZ);
+            SimpleDrawer.DrawLine(simpleImage, coord4, coord41, screenZ);
 
 
            
-            map.Save("test.jpg", ImageFormat.Jpeg);
+            simpleMap.Save(simpleFileName, ImageFormat.Jpeg);
+
+            //view point
+            //note that the blue square is the back face of the cube
+
+
+            string advancedFileName = "advanced.jpg";
+            if (File.Exists(advancedFileName)) File.Delete(advancedFileName);
+
+            Bitmap advancedMap = new Bitmap(400, 400);
+
+            Graphics advancedImage = Graphics.FromImage(advancedMap);
+
+            Coordinate3D viewPoint = new Coordinate3D(120, 60, -1);
+
+            //draw rear square
+
+            //AdvancedDrawer.DrawLine(advancedImage, coord11, coord21, viewPoint, screenZ);
+            //AdvancedDrawer.DrawLine(advancedImage, coord21, coord31, viewPoint, screenZ);
+            //AdvancedDrawer.DrawLine(advancedImage, coord31, coord41, viewPoint, screenZ);
+            //AdvancedDrawer.DrawLine(advancedImage, coord41, coord11, viewPoint, screenZ);
+
+            AdvancedDrawer.DrawSquare(advancedImage, coord11, coord21, coord31, coord41, viewPoint, screenZ);
+
+            //draw front square
+            AdvancedDrawer.DrawLine(advancedImage, coord1, coord2, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord2, coord3, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord3, coord4, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord4, coord1, viewPoint, screenZ);
+
+
+
 
             
 
+            //link front to rear
+
+            AdvancedDrawer.DrawLine(advancedImage, coord1, coord11, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord2, coord21, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord3, coord31, viewPoint, screenZ);
+            AdvancedDrawer.DrawLine(advancedImage, coord4, coord41, viewPoint, screenZ);
+
+            advancedMap.Save(advancedFileName);
 
 
 

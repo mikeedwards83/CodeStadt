@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedDrawer.cs" />
     <Compile Include="Coordinate2D.cs" />
     <Compile Include="Coordinate3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
