@@ -109,6 +109,7 @@ namespace CodeStadt.Application
             //view point
             //note that the blue square is the back face of the cube
 
+            //some change
 
             string advancedFileName = "advanced.jpg";
             if (File.Exists(advancedFileName)) File.Delete(advancedFileName);
