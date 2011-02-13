@@ -102,7 +102,7 @@ namespace CodeStadt.Application
             SimpleDrawer.DrawLine(simpleImage, coord3, coord31, screenZ);
             SimpleDrawer.DrawLine(simpleImage, coord4, coord41, screenZ);
 
-
+            //hello new demo branch
            
             simpleMap.Save(simpleFileName, ImageFormat.Jpeg);
 
