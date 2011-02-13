@@ -1,10 +1,10 @@
-D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.exe
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.pdb
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\DrivenMetrics.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Extensions.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\obj\Debug\ResolveAssemblyReference.cache
-D:\Git\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.exe
 D:\Git\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.pdb
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Mdb.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Pdb.dll
+D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.dll
+D:\Git\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.dll

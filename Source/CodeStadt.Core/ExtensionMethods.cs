@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CodeStadt.Core
+namespace CodeStadt
 {
     public static class ExtensionMethods
     {
