@@ -16,3 +16,5 @@ D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\Castle.Core.pdb
 D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\Castle.Core.xml
 D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\Mono.Cecil.Mdb.dll
 D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\Mono.Cecil.Pdb.dll
+D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\CodeStadt.Draw.dll
+D:\Git\CodeStadt\Source\CodeStadt.Application\bin\Debug\CodeStadt.Draw.pdb

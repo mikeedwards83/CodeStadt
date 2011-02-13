@@ -63,6 +63,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -82,6 +83,10 @@
     <ProjectReference Include="..\CodeStadt.Core\CodeStadt.Core.csproj">
       <Project>{A7761043-8B48-410F-9063-06BFFAF6B524}</Project>
       <Name>CodeStadt.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeStadt.Draw\CodeStadt.Draw.csproj">
+      <Project>{B17E30F7-A6FE-4AC1-BADE-5314E0E31B11}</Project>
+      <Name>CodeStadt.Draw</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

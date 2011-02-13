@@ -1,0 +1,5 @@
+D:\Git\CodeStadt\Source\CodeStadt.Draw\obj\Debug\ResolveAssemblyReference.cache
+D:\Git\CodeStadt\Source\CodeStadt.Draw\bin\Debug\CodeStadt.Draw.dll
+D:\Git\CodeStadt\Source\CodeStadt.Draw\bin\Debug\CodeStadt.Draw.pdb
+D:\Git\CodeStadt\Source\CodeStadt.Draw\obj\Debug\CodeStadt.Draw.dll
+D:\Git\CodeStadt\Source\CodeStadt.Draw\obj\Debug\CodeStadt.Draw.pdb
