@@ -14,7 +14,10 @@ namespace CodeStadt.Application
 {
     class Program
     {
-
+        /// <summary>
+        /// Application main method.
+        /// </summary>
+        /// <param name="args">Command line arguments</param>
         static void Main(string[] args)
         {
 
