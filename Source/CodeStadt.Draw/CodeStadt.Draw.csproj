@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DrivenMetrics, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Depends\DrivenMetrics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -49,9 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvancedDrawer.cs" />
+    <Compile Include="Builders\ICityBuilder.cs" />
+    <Compile Include="Builders\RandomCubeBuilder.cs" />
     <Compile Include="Coordinate2D.cs" />
     <Compile Include="Coordinate3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shapes\Cube.cs" />
+    <Compile Include="Shapes\Face.cs" />
+    <Compile Include="Shapes\IShape.cs" />
     <Compile Include="SimpleDrawer.cs" />
   </ItemGroup>
   <ItemGroup>

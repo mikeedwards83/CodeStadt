@@ -9,6 +9,8 @@ using System.Drawing;
 using CodeStadt.Draw;
 using System.Drawing.Imaging;
 using System.IO;
+using CodeStadt.Draw.Shapes;
+using CodeStadt.Draw.Builders;
 
 namespace CodeStadt.Application
 {
@@ -139,25 +141,15 @@ namespace CodeStadt.Application
             //AdvancedDrawer.DrawLine(advancedImage, coord31, coord41, viewPoint, screenZ);
             //AdvancedDrawer.DrawLine(advancedImage, coord41, coord11, viewPoint, screenZ);
 
-            drawer.DrawFilledPolygon(Brushes.Beige, coord11, coord21, coord31, coord41);
-
-            //draw front square
-            drawer.DrawLine(coord1, coord2);
-            drawer.DrawLine(coord2, coord3);
-            drawer.DrawLine(coord3, coord4);
-            drawer.DrawLine(coord4, coord1);
+            ICityBuilder builder = new RandomCubeBuilder(50, 600, 40, 600, 2, 3, 3, 1);
 
 
+            IEnumerable<IShape> shapes = builder.CreateCity(null);
 
-
-            
-
-            //link front to rear
-
-            drawer.DrawLine(coord1, coord11);
-            drawer.DrawLine(coord2, coord21);
-            drawer.DrawLine(coord3, coord31);
-            drawer.DrawLine(coord4, coord41);
+            shapes.ForEach(y => y.Faces.ForEach(x =>
+            {
+                drawer.DrawFilledPolygon(x.Brush, x.ToArray());
+            }));
 
             advancedMap.Save(advancedFileName);
 
