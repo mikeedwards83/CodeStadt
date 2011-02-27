@@ -8,3 +8,13 @@ D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Mdb.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Pdb.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.dll
 D:\Git\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\CodeStadt.Core.pdb
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\DrivenMetrics.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Extensions.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.dll
+C:\Storm\Projects\CodeStadt\Source\CodeStadt.Core\obj\Debug\CodeStadt.Core.pdb

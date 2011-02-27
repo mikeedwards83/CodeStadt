@@ -58,6 +58,44 @@
     <Compile Include="Coordinate2D.cs" />
     <Compile Include="Coordinate3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RayTracer\Environment\Camera.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Color.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Light.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Objects\Plane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Objects\SceneObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Objects\Sphere.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Scene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Screen.cs" />
+    <Compile Include="RayTracer\Environment\Surface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Environment\Surfaces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Intersection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Ray.cs" />
+    <Compile Include="RayTracer\RayTracer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RayTracer\Vector.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Shapes\Cube.cs" />
     <Compile Include="Shapes\Face.cs" />
     <Compile Include="Shapes\IShape.cs" />
