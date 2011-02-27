@@ -52,7 +52,7 @@ namespace CodeStadt.Draw.Shapes
             //top
             faces.Add(new Face(new Coordinate3D[] { frontTopLeft, frontTopRight, backTopRight, backTopLeft }) { Brush = Brushes.DarkGreen });
             //left
-            faces.Add(new Face(new Coordinate3D[] { frontBottomRight, frontTopRight, backTopRight, backBottomRight }) { Brush = Brushes.Bisque });
+            faces.Add(new Face(new Coordinate3D[] { frontBottomRight, frontTopRight, backTopRight, backBottomRight }) { Brush = Brushes.Red });
             //front
             faces.Add(new Face(new Coordinate3D[] { frontBottomLeft, frontBottomRight, frontTopRight, frontTopLeft }) { Brush = Brushes.Azure });
             

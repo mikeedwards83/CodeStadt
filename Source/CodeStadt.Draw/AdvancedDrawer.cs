@@ -30,7 +30,7 @@ namespace CodeStadt.Draw
             Coordinate2D start2d = ConvertTo2DCoords(start,_viewPoint, _screenZ);
             Coordinate2D end2d = ConvertTo2DCoords(end, _viewPoint, _screenZ);
 
-            _img.DrawLine(new Pen(Color.Red, 2), start2d, end2d);
+            _img.DrawLine(new Pen(Color.Red, 2), new Point(start2d.X+500, start2d.Y+500), new Point(end2d.X+500, end2d.Y+500));
 
         }
 
@@ -44,7 +44,7 @@ namespace CodeStadt.Draw
                 coords.Add(ConvertTo2DCoords(point, _viewPoint, _screenZ));
             }
 
-            _img.FillPolygon(brush, coords.Select(x=> (Point) x).ToArray());
+            _img.FillPolygon(brush, coords.Select(x=> new Point(x.X+500, (x.Y*-1)+500)).ToArray());
 
         }
 
@@ -63,7 +63,9 @@ namespace CodeStadt.Draw
             //not sure if this is correct
             if (point.Z == 0 || viewPoint.Z == 0) return point.X;
 
-            return (((point.X - viewPoint.X) * (screenZ - viewPoint.Z)) / (point.Z * viewPoint.Z)) + viewPoint.X;
+             return (((point.X - viewPoint.X) * (screenZ - viewPoint.Z)) / (screenZ * viewPoint.Z)) + viewPoint.X;
+
+
         }
 
         private static int CalculateScreenY(Coordinate3D point, Coordinate3D viewPoint, int screenZ)
@@ -72,8 +74,11 @@ namespace CodeStadt.Draw
             if (point.Z == 0 || viewPoint.Z == 0) return point.Y;
 
             return (((point.Y - viewPoint.Y) * (screenZ - viewPoint.Z)) / (point.Z * viewPoint.Z))  +viewPoint.Y;
-        }
 
+            
+        }
+        //Sy = (Py-Ey)*( Sz-Ez) + Ey
+        //         ( Pz-Ez)
 
         
 

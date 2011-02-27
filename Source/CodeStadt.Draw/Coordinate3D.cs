@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CodeStadt.Draw
 {
+    [System.Diagnostics.DebuggerDisplay("X: {X} Y: {Y} Z: {Z}")]
     public class Coordinate3D
     {
         public Coordinate3D() { }

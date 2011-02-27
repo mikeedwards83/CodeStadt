@@ -6,6 +6,7 @@ using System.Drawing;
 
 namespace CodeStadt.Draw
 {
+    [System.Diagnostics.DebuggerDisplay("X: {X} Y: {Y}")]
     public class Coordinate2D
     {
         public Coordinate2D() { }

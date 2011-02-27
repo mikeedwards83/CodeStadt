@@ -54,18 +54,19 @@ namespace CodeStadt.Draw.Builders
 
             for (int i = 0; i < _numCubeDeep; i++)
             {
-                int z = rand.Next(preZ, preZ + _maxDepth/2);
+                int z = rand.Next(preZ, preZ*2);
+                z = 3;
                 preX = 10;
                 for (int j = 0; j < _numCubeWide; j++)
                 {
                     int x = rand.Next(preX, preX + _maxWidth);
-
+                    x = 50;
                     int width = rand.Next(_minWidth, _maxWidth);
                     int height = rand.Next(_minHeight, _maxHeight);
                     int depth = rand.Next(_minDepth, _maxDepth);
 
                     Coordinate3D bottomLeft = new Coordinate3D(x, 0, z);
-                    Cube cube = new Cube(bottomLeft, width, height, depth);
+                    Cube cube = new Cube(bottomLeft, 300, 300, 10);
                     shapes.Add(cube);
 
                     preX = x+_maxWidth; 

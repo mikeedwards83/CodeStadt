@@ -64,7 +64,7 @@ namespace CodeStadt.Application
 
             
             
-            int screenZ = 1;
+            int screenZ = 49;
 
             string simpleFileName = "simple.jpg";
             if (File.Exists(simpleFileName)) File.Delete(simpleFileName);
@@ -122,16 +122,25 @@ namespace CodeStadt.Application
 
             Graphics advancedImage = Graphics.FromImage(advancedMap);
 
-            Coordinate3D viewPoint = new Coordinate3D(600,600, -1);
+            Coordinate3D viewPoint = new Coordinate3D(0,0, 30);
 
             AdvancedDrawer drawer = new AdvancedDrawer(screenZ, viewPoint, advancedImage);
 
-            drawer.DrawFilledPolygon(Brushes.Black,
-                new Coordinate3D(0, 0, 0),
-                new Coordinate3D(1000, 0, 0),
-                new Coordinate3D(1000, 1000, 0),
-                new Coordinate3D(0, 1000, 0));
-            
+
+
+            advancedImage.FillPolygon(Brushes.Black, new Point[]{
+                new Point(0,1000),
+                new Point(1000,1000),
+                new Point(1000,0),
+                new Point(0,0),
+            });
+
+            Coordinate3D middleX = new Coordinate3D(500, 0, screenZ);
+            Coordinate3D middleY = new Coordinate3D(0, 500, screenZ);
+
+            drawer.DrawLine(new Coordinate3D(-500, 0, screenZ), new Coordinate3D(500, 0, screenZ));
+            drawer.DrawLine(new Coordinate3D(0,-500, screenZ), new Coordinate3D(0, 500, screenZ));
+
 
 
             //draw rear square
@@ -141,10 +150,13 @@ namespace CodeStadt.Application
             //AdvancedDrawer.DrawLine(advancedImage, coord31, coord41, viewPoint, screenZ);
             //AdvancedDrawer.DrawLine(advancedImage, coord41, coord11, viewPoint, screenZ);
 
-            ICityBuilder builder = new RandomCubeBuilder(50, 600, 40, 600, 2, 3, 3, 1);
+            //ICityBuilder builder = new RandomCubeBuilder(50, 600, 40, 600, 40, 600, 1, 1);
 
 
-            IEnumerable<IShape> shapes = builder.CreateCity(null);
+//            IEnumerable<IShape> shapes = builder.CreateCity(null);
+
+            Cube cb = new Cube(new Coordinate3D(0, 0, 50), 50, 50, 50);
+            IEnumerable<IShape> shapes = new IShape[] { cb };
 
             shapes.ForEach(y => y.Faces.ForEach(x =>
             {
